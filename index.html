@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,803 +49,170 @@
             position: relative;
         }
 
-        /* Efecto de partículas de fondo */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(9, 154, 179, 0.295) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(53, 242, 255, 0.192) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(58, 216, 237, 0.247) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        h1, h2, h3 { 
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--gradient-primary);
-            border-radius: 2px;
-        }
-
-        form { 
-            display: grid; 
-            gap: 2rem; 
-        }
-
-        fieldset { 
-            border: 2px solid var(--border-color); 
-            border-radius: 16px; 
-            padding: 2rem; 
-            background: var(--card-bg);
-            box-shadow: var(--shadow);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        fieldset::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-        }
-
-        fieldset:hover {
-            background: var(--card-hover);
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
-        }
-
-        legend { 
-            font-weight: 700; 
-            font-size: 1.4em; 
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            padding: 0 1rem; 
-            margin-left: 1rem;
-        }
-
-        label { 
-            font-weight: 600; 
-            display: block; 
-            margin-bottom: 0.5rem; 
-            color: var(--text-color);
-            font-size: 0.95rem;
-        }
-
-        .tooltip { 
-            cursor: help; 
-            border-bottom: 2px dotted var(--primary-color); 
-            transition: border-color 0.2s;
-        }
-
-        .tooltip:hover {
-            border-color: var(--secondary-color);
-        }
-        
-        input[type="text"], input[type="number"], select { 
-            padding: 12px 16px; 
-            border: 2px solid var(--border-color); 
-            border-radius: 10px; 
-            width: 100%; 
-            background: var(--input-bg); 
-            color: var(--text-color); 
-            margin-bottom: 1rem; 
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(10px);
-        }
-
-        input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
-            background: var(--input-focus);
-            transform: translateY(-1px);
-        }
-
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(9, 154, 179, 0.295) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(53, 242, 255, 0.192) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(58, 216, 237, 0.247) 0%, transparent 50%); pointer-events: none; z-index: -1; }
+        h1, h2, h3 { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; margin-bottom: 1rem; }
+        h1 { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; position: relative; }
+        h1::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: var(--gradient-primary); border-radius: 2px; }
+        form { display: grid; gap: 2rem; }
+        fieldset { border: 2px solid var(--border-color); border-radius: 16px; padding: 2rem; background: var(--card-bg); box-shadow: var(--shadow); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        fieldset::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient-primary); }
+        fieldset:hover { background: var(--card-hover); box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+        legend { font-weight: 700; font-size: 1.4em; background: var(--gradient-secondary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding: 0 1rem; margin-left: 1rem; }
+        label { font-weight: 600; display: block; margin-bottom: 0.5rem; color: var(--text-color); font-size: 0.95rem; }
+        .tooltip { cursor: help; border-bottom: 2px dotted var(--primary-color); transition: border-color 0.2s; }
+        .tooltip:hover { border-color: var(--secondary-color); }
+        input[type="text"], input[type="number"], select { padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 10px; width: 100%; background: var(--input-bg); color: var(--text-color); margin-bottom: 1rem; font-size: 1rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(10px); }
+        input:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1); background: var(--input-focus); transform: translateY(-1px); }
         input[type="number"] { -moz-appearance: textfield; }
         input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-
-        button { 
-            background: var(--gradient-primary); 
-            color: white; 
-            border: none; 
-            padding: 14px 24px; 
-            cursor: pointer; 
-            border-radius: 10px; 
-            font-size: 1rem; 
-            font-weight: 600; 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        button { background: var(--gradient-primary); color: white; border: none; padding: 14px 24px; cursor: pointer; border-radius: 10px; font-size: 1rem; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+        button:hover::before { left: 100%; }
+        button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3); }
+        button:active { transform: translateY(0); }
+        button.remove-btn { background: var(--gradient-secondary); font-size: 0.85rem; padding: 8px 16px; margin-left: 10px; border-radius: 8px; }
+        button.remove-btn:hover { box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3); }
+        .header-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; position: relative; }
+        .header-title h1 { flex: 1; text-align: center; }
+        #settings-btn { background: var(--card-bg); border: 2px solid var(--border-color); font-size: 1.8em; color: var(--primary-color); padding: 12px; cursor: pointer; border-radius: 12px; transition: all 0.3s ease; }
+        #settings-btn:hover { transform: rotate(180deg) scale(1.1); border-color: var(--primary-color); box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2); }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(8px); z-index: 1000; display: none; place-items: center; animation: fadeInOverlay 0.3s ease-out; }
+        @keyframes fadeInOverlay { from { opacity: 0; } to { opacity: 1; } }
+        .modal-content { background: var(--card-bg); padding: 2rem; border-radius: 20px; width: 90%; max-width: 700px; box-shadow: var(--shadow-hover); animation: slideInModal 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid var(--border-color); position: relative; overflow: hidden; }
+        .modal-content::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); }
+        @keyframes slideInModal { from { opacity: 0; transform: translateY(-50px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .modal-close { background: var(--error-color); border: none; color: white; font-size: 1.5em; cursor: pointer; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .modal-close:hover { transform: rotate(180deg) scale(1.1); box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3); }
+        .master-header, .master-row { display: grid; grid-template-columns: 2fr 0.8fr 0.8fr 0.8fr 1.2fr 0.8fr auto; gap: 12px; align-items: center; margin-bottom: 1rem; padding: 0 8px; }
+        .publishing-header, .publishing-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap: 12px; align-items: center; margin-bottom: 1rem; padding: 0 8px; }
+        .collaborator-header { font-weight: 700; font-size: 0.95em; margin-bottom: 1rem; background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .split-summary { padding: 1rem 1.5rem; margin-bottom: 1.5rem; border-radius: 12px; font-weight: 600; background: var(--card-bg); color: var(--success-color); border: 2px solid var(--success-color); position: relative; overflow: hidden; }
+        .split-summary::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--success-color); }
+        .split-summary.invalid { background: rgba(255, 71, 87, 0.1); color: var(--error-color); border-color: var(--error-color); animation: shake 0.5s ease-in-out; }
+        .split-summary.invalid::before { background: var(--error-color); }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+        .input-with-controls { display: flex; align-items: center; border-radius: 10px; overflow: hidden; border: 2px solid var(--border-color); transition: border-color 0.3s ease; }
+        .input-with-controls:focus-within { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1); }
+        .input-control-btn { background: var(--accent-color); color: white; border: none; padding: 12px; font-size: 1.2em; cursor: pointer; transition: all 0.2s ease; height: 48px; width: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .input-control-btn:hover { background: var(--primary-color); transform: scale(1.05); }
+        .input-with-controls input { margin: 0; border: none; border-radius: 0; text-align: center; height: 48px; background: var(--input-bg); }
+        .flowchart { text-align: center; margin-top: 2rem; }
+        .flow-node { background: var(--card-bg); border: 2px solid var(--primary-color); color: var(--text-color); padding: 1rem 1.5rem; border-radius: 16px; display: inline-block; margin: 8px; font-weight: 600; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .flow-node::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent); transition: left 0.6s; }
+        .flow-node:hover::before { left: 100%; }
+        .flow-node:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 212, 255, 0.2); }
+        .flow-node strong { display: block; font-size: 1.2em; background: var(--gradient-secondary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-top: 0.5rem; }
+        .flow-arrow { font-size: 2em; color: var(--primary-color); margin: 1rem 0; display: block; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        .flow-split-container { display: flex; justify-content: space-around; gap: 2rem; margin-top: 2rem; align-items: flex-start; }
+        .flow-path { display: flex; flex-direction: column; align-items: center; min-width: 45%; }
+        .deduction-path { display: flex; justify-content: space-around; width: 100%; margin-top: 1.5rem; }
+        .deduction-node { background: linear-gradient(145deg, #101c2a, #00686b); border: 2px solid var(--warning-color); color: var(--text-color); padding: 1rem; border-radius: 12px; font-size: 0.9em; margin-bottom: 0.5rem; text-align: left; transition: all 0.3s ease; }
+        .deduction-node:hover { transform: translateX(5px); box-shadow: 0 8px 20px rgba(255, 165, 2, 0.2); }
+        .deduction-node strong { font-size: 1em; color: var(--warning-color); display: block; }
+        .debt-info { font-size: 0.8em; margin-top: 0.5rem; padding: 0.5rem; border-radius: 6px; }
+        .debt-zero { background: linear-gradient(135deg, rgba(46, 213, 115, 0.2), rgba(46, 213, 115, 0.1)); border: 1px solid var(--success-color); }
+        .debt-remaining { background: linear-gradient(135deg, rgba(255, 71, 87, 0.2), rgba(255, 71, 87, 0.1)); border: 1px solid var(--error-color); }
+        table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background: var(--gradient-primary); color: white; font-weight: 600; }
+        tbody tr { transition: all 0.2s ease; }
+        tbody tr:hover { background: rgba(0, 212, 255, 0.05); transform: translateX(5px); }
+        .mobile-label > span { display: none; }
+        .mobile-label { margin-bottom: 0; }
+        label.mobile-label > input, label.mobile-label > div { margin-bottom: 0; }
+        
+        /* --- ESTILOS PARA EL PANEL PLEGABLE --- */
+        .legend-collapsible {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        button:hover::before {
-            left: 100%;
-        }
-
-        button:hover { 
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        button.remove-btn { 
-            background: var(--gradient-secondary); 
-            font-size: 0.85rem; 
-            padding: 8px 16px; 
-            margin-left: 10px; 
-            border-radius: 8px;
-        }
-
-        button.remove-btn:hover { 
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
-        }
-
-        /* --- Header mejorado --- */
-        .header-title { 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 3rem;
-            position: relative;
         }
-
-        .header-title h1 {
-            flex: 1;
-            text-align: center;
+        .collapse-indicator {
+            font-size: 1.2em;
+            transition: transform 0.3s ease-out;
         }
-
-        #settings-btn { 
-            background: var(--card-bg); 
-            border: 2px solid var(--border-color); 
-            font-size: 1.8em; 
-            color: var(--primary-color); 
-            padding: 12px; 
-            cursor: pointer; 
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        #settings-btn:hover { 
-            transform: rotate(180deg) scale(1.1);
-            border-color: var(--primary-color);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
-        }
-
-        /* --- Modal mejorado --- */
-        .modal-overlay {
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8); 
-            backdrop-filter: blur(8px); 
-            z-index: 1000; 
-            display: none; 
-            place-items: center;
-            animation: fadeInOverlay 0.3s ease-out;
-        }
-
-        @keyframes fadeInOverlay {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: var(--card-bg); 
-            padding: 2rem; 
-            border-radius: 20px;
-            width: 90%; 
-            max-width: 700px; 
-            box-shadow: var(--shadow-hover);
-            animation: slideInModal 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid var(--border-color);
-            position: relative;
+        .collapsible-content {
+            max-height: 1500px;
             overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .is-collapsed .collapsible-content {
+            max-height: 0;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            opacity: 0;
+            border-top: none !important;
+            margin-top: 0 !important;
+        }
+        .is-collapsed .legend-collapsible .collapse-indicator {
+            transform: rotate(-90deg);
         }
 
-        .modal-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-        }
-
-        @keyframes slideInModal {
-            from { 
-                opacity: 0; 
-                transform: translateY(-50px) scale(0.9); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0) scale(1); 
-            }
-        }
-
-        .modal-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 1.5rem; 
-        }
-
-        .modal-close { 
-            background: var(--error-color); 
-            border: none; 
-            color: white; 
-            font-size: 1.5em; 
-            cursor: pointer; 
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .modal-close:hover {
-            transform: rotate(180deg) scale(1.1);
-            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
-        }
-
-        /* --- Grids mejorados --- */
-        .master-header, .master-row { 
-            display: grid; 
-            grid-template-columns: 2fr 0.8fr 0.8fr 0.8fr 1.2fr 0.8fr 80px; 
-            gap: 12px; 
-            align-items: center; 
-            margin-bottom: 1rem; 
-            padding: 0 8px; 
-        }
-
-        .publishing-header, .publishing-row { 
-            display: grid; 
-            grid-template-columns: 2fr 1fr 1fr 1fr 80px; 
-            gap: 12px; 
-            align-items: center; 
-            margin-bottom: 1rem; 
-            padding: 0 8px; 
-        }
-
-        .collaborator-header { 
-            font-weight: 700; 
-            font-size: 0.95em; 
-            margin-bottom: 1rem; 
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .split-summary { 
-            padding: 1rem 1.5rem; 
-            margin-bottom: 1.5rem; 
-            border-radius: 12px; 
-            font-weight: 600; 
-            background: var(--card-bg);
-            color: var(--success-color); 
-            border: 2px solid var(--success-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .split-summary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--success-color);
-        }
-
-        .split-summary.invalid { 
-            background: rgba(255, 71, 87, 0.1); 
-            color: var(--error-color); 
-            border-color: var(--error-color); 
-            animation: shake 0.5s ease-in-out;
-        }
-
-        .split-summary.invalid::before {
-            background: var(--error-color);
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-
-        /* --- Input controls mejorados --- */
-        .input-with-controls { 
-            display: flex; 
-            align-items: center; 
-            border-radius: 10px;
-            overflow: hidden;
-            border: 2px solid var(--border-color);
-            transition: border-color 0.3s ease;
-        }
-
-        .input-with-controls:focus-within {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
-        }
-
-        .input-control-btn { 
-            background: var(--accent-color); 
-            color: white; 
-            border: none; 
-            padding: 12px; 
-            font-size: 1.2em; 
-            cursor: pointer; 
-            transition: all 0.2s ease; 
-            height: 48px; 
-            width: 48px; 
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .input-control-btn:hover {
-            background: var(--primary-color);
-            transform: scale(1.05);
-        }
-
-        .input-with-controls input { 
-            margin: 0; 
-            border: none;
-            border-radius: 0; 
-            text-align: center; 
-            height: 48px;
-            background: var(--input-bg);
-        }
-
-        /* --- Diagrama de flujo mejorado --- */
-        .flowchart { 
-            text-align: center; 
-            margin-top: 2rem; 
-        }
-
-        .flow-node { 
-            background: var(--card-bg); 
-            border: 2px solid var(--primary-color); 
-            color: var(--text-color); 
-            padding: 1rem 1.5rem; 
-            border-radius: 16px; 
-            display: inline-block; 
-            margin: 8px; 
-            font-weight: 600; 
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .flow-node::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            transition: left 0.6s;
-        }
-
-        .flow-node:hover::before {
-            left: 100%;
-        }
-
-        .flow-node:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .flow-node strong { 
-            display: block; 
-            font-size: 1.2em; 
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-top: 0.5rem;
-        }
-
-        .flow-arrow { 
-            font-size: 2em; 
-            color: var(--primary-color); 
-            margin: 1rem 0; 
-            display: block; 
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .flow-split-container { 
-            display: flex; 
-            justify-content: space-around; 
-            gap: 2rem; 
-            margin-top: 2rem; 
-            align-items: flex-start; 
-        }
-
-        .flow-path { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            min-width: 45%; 
-        }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 5px var(--primary-color); } 50% { box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); } }
+        .glow-effect { animation: glow 2s ease-in-out infinite; }
+        html { scroll-behavior: smooth; }
+        button:focus, input:focus { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+        .calculating { opacity: 0.7; pointer-events: none; position: relative; }
+        .calculating::after { content: ''; position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; border: 2px solid var(--primary-color); border-top: 2px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; transform: translate(-50%, -50%); }
+        @keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
         
-        .deduction-path { 
-            display: flex; 
-            justify-content: space-around; 
-            width: 100%; 
-            margin-top: 1.5rem; 
-        }
-
-        .deduction-node { 
-            background: linear-gradient(145deg, #101c2a, #00686b); 
-            border: 2px solid var(--warning-color); 
-            color: var(--text-color); 
-            padding: 1rem; 
-            border-radius: 12px; 
-            font-size: 0.9em; 
-            margin-bottom: 0.5rem; 
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-
-        .deduction-node:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 20px rgba(255, 165, 2, 0.2);
-        }
-
-        .deduction-node strong { 
-            font-size: 1em; 
-            color: var(--warning-color); 
-            display: block; 
-        }
-        
-        .creative-net-node { 
-            background: linear-gradient(145deg, #1b4d3e, #0f3d2f); 
-            border-color: var(--success-color); 
-            margin-top: 1rem; 
-        }
-
-        .creative-net-node:hover {
-            box-shadow: 0 12px 30px rgba(46, 213, 115, 0.2);
-        }
-        
-        .debt-info { 
-            font-size: 0.8em; 
-            margin-top: 0.5rem; 
-            padding: 0.5rem; 
-            border-radius: 6px; 
-        }
-
-        .debt-zero { 
-            background: linear-gradient(135deg, rgba(46, 213, 115, 0.2), rgba(46, 213, 115, 0.1)); 
-            border: 1px solid var(--success-color);
-        }
-
-        .debt-remaining { 
-            background: linear-gradient(135deg, rgba(255, 71, 87, 0.2), rgba(255, 71, 87, 0.1)); 
-            border: 1px solid var(--error-color);
-        }
-
-        /* --- Tabla mejorada --- */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background: var(--gradient-primary);
-            color: white;
-            font-weight: 600;
-        }
-
-        tbody tr {
-            transition: all 0.2s ease;
-        }
-
-        tbody tr:hover {
-            background: rgba(0, 212, 255, 0.05);
-            transform: translateX(5px);
-        }
-
-        /* --- Mobile optimizado --- */
-        @media (max-width: 768px) {
-            body { padding: 1rem; }
-            
-            h1 { 
-                font-size: 2rem; 
-            }
-
-            .header-title {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .modal-content { 
-                padding: 1.5rem; 
-                margin: 1rem;
-            }
-
-            .master-header, .publishing-header { 
-                display: none; 
-            }
-
-            .master-row, .publishing-row {
-                grid-template-columns: 1fr;
-                border: 2px solid var(--border-color);
-                padding: 1.5rem;
-                border-radius: 12px;
-                margin-bottom: 1.5rem;
-                background: var(--card-bg);
-            }
-
-            .master-row input, .publishing-row input { 
-                margin-bottom: 0.8rem; 
-            }
-
-            .master-row button, .publishing-row button { 
-                width: 100%; 
-                margin-left: 0; 
-                margin-top: 0.8rem; 
-            }
-            
-            .flow-split-container { 
-                flex-direction: column; 
-                align-items: center; 
-            }
-
-            .flow-path { 
-                min-width: 100%; 
-                margin-bottom: 2rem; 
-            }
-
-            .deduction-path { 
-                flex-direction: column; 
-            }
-
-            table, th, td {
-                font-size: 0.9rem;
-            }
-        }
-
-        /* --- Animaciones adicionales --- */
-        @keyframes glow {
-            0%, 100% {
-                box-shadow: 0 0 5px var(--primary-color);
-            }
-            50% {
-                box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
-            }
-        }
-
-        .glow-effect {
-            animation: glow 2s ease-in-out infinite;
-        }
-
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Mejoras en accesibilidad */
-        button:focus, input:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-
-        /* Loader para cálculos */
-        .calculating {
-            opacity: 0.7;
-            pointer-events: none;
-            position: relative;
-        }
-
-        .calculating::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--primary-color);
-            border-top: 2px solid transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes spin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        /* ================================================= */
-        /* --- ESTILOS DE IMPRESIÓN --- */
-        /* ================================================= */
         @media print {
-            :root {
-                --bg-color: #ffffff;
-                --text-color: #000000;
-            }
+            :root { --bg-color: #ffffff; --text-color: #000000; }
+            body { background: var(--bg-color) !important; color: var(--text-color) !important; padding: 1cm; font-size: 12pt; }
+            body::before { display: none; }
+            h1, h2, h3, h4, legend { background: none !important; -webkit-text-fill-color: inherit !important; color: #000 !important; text-align: left; padding: 0; margin-left: 0; }
+            h1 { font-size: 24pt; text-align: center; margin-bottom: 1.5rem; }
+            h1::after { display: none; }
+            form, #config-modal, .header-title button, .modal-overlay, .remove-btn, .input-with-controls, #print-btn, #copy-btn, .collaborator-header button, .split-summary { display: none !important; }
+            fieldset { border: 1px solid #ccc; background: none !important; box-shadow: none !important; padding: 1.5rem; margin-bottom: 1.5rem; page-break-inside: avoid; }
+            #resultados { margin-top: 0; }
+            table { width: 100%; border: 1px solid #333; font-size: 10pt; }
+            th, td { border: 1px solid #333; padding: 8px; color: #000; }
+            th { background: #eee !important; }
+            tbody tr:hover { background: none !important; transform: none !important; }
+            .flowchart, .flow-split-container, .flow-path, .deduction-path { display: block; }
+            .flow-node, .deduction-node { border: 2px solid #000 !important; background: #f9f9f9 !important; color: #000 !important; box-shadow: none !important; width: 100%; margin-bottom: 1rem; }
+            .flow-node strong, .deduction-node strong, .deduction-node span, td strong { color: #000 !important; background: none !important; -webkit-text-fill-color: inherit !important; }
+            .flow-arrow { color: #000 !important; animation: none !important; }
+            .flow-split-container { margin-top: 1rem; }
+            .flow-path { margin-bottom: 2rem; }
+            a[href]:after { content: none !important; }
+        }
 
-            body {
-                background: var(--bg-color) !important;
-                color: var(--text-color) !important;
-                padding: 1cm;
-                font-size: 12pt;
-            }
+        @media (max-width: 768px) {
+            body { padding: 1rem; font-size: 15px; }
+            h1 { font-size: 1.8rem; }
+            .header-title { flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
+            form { gap: 1.5rem; }
+            fieldset { padding: 1.5rem 1rem; }
+            legend { font-size: 1.3em; }
+            .modal-content { padding: 1.5rem; width: calc(100% - 2rem); margin: 1rem; }
 
-            body::before {
-                display: none; /* Ocultar partículas */
-            }
+            /* --- ESTILOS MÓVIL PARA EL PANEL PLEGABLE --- */
+            #streams-fieldset .legend-collapsible { cursor: pointer; }
+            #streams-fieldset .collapsible-content { padding-top: 1.5rem; border-top: 2px solid var(--border-color); margin-top: 1.5rem; }
 
-            h1, h2, h3, h4, legend {
-                background: none !important;
-                -webkit-text-fill-color: inherit !important;
-                color: #000 !important;
-                text-align: left;
-                padding: 0;
-                margin-left: 0;
-            }
-            
-            h1 {
-                font-size: 24pt;
-                text-align: center;
-                margin-bottom: 1.5rem;
-            }
-            
-            h1::after {
-                display: none;
-            }
-
-            /* Ocultar elementos no necesarios para el reporte */
-            form, #config-modal, .header-title button, .modal-overlay, .remove-btn, .input-with-controls,
-            #print-btn, #copy-btn, .collaborator-header button, .split-summary {
-                display: none !important;
-            }
-
-            fieldset {
-                border: 1px solid #ccc;
-                background: none !important;
-                box-shadow: none !important;
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
-                page-break-inside: avoid; /* Evitar que se corte un fieldset entre páginas */
-            }
-
-            #resultados {
-                margin-top: 0;
-            }
-
-            table {
-                width: 100%;
-                border: 1px solid #333;
-                font-size: 10pt;
-            }
-
-            th, td {
-                border: 1px solid #333;
-                padding: 8px;
-                color: #000;
-            }
-
-            th {
-                background: #eee !important;
-            }
-
-            tbody tr:hover {
-                background: none !important;
-                transform: none !important;
-            }
-            
-            /* Estilos para el Flowchart en impresión */
-            .flowchart, .flow-split-container, .flow-path, .deduction-path {
-                display: block; /* Forzar layout de bloque */
-            }
-
-            .flow-node, .deduction-node {
-                border: 2px solid #000 !important;
-                background: #f9f9f9 !important;
-                color: #000 !important;
-                box-shadow: none !important;
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-            
-            .flow-node strong, .deduction-node strong, .deduction-node span, td strong {
-                color: #000 !important;
-                background: none !important;
-                -webkit-text-fill-color: inherit !important;
-            }
-
-            .flow-arrow {
-                color: #000 !important;
-                animation: none !important;
-            }
-
-            .flow-split-container {
-                margin-top: 1rem;
-            }
-
-            .flow-path {
-                margin-bottom: 2rem;
-            }
-
-            a[href]:after {
-                content: none !important;
-            }
+            .master-header, .publishing-header { display: none; }
+            .master-row, .publishing-row { grid-template-columns: 1fr; border: 2px solid var(--border-color); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; background: var(--card-bg); gap: 1rem; }
+            .mobile-label > span { display: block; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); margin-bottom: 6px; }
+            .master-row .remove-btn, .publishing-row .remove-btn { width: 100%; margin-left: 0; margin-top: 0.8rem; }
+            .master-row input, .publishing-row input, .master-row .input-with-controls, .master-row label, .publishing-row label { margin-bottom: 0; }
+            .flow-split-container { flex-direction: column; align-items: center; gap: 0; }
+            .flow-path { min-width: 100%; margin-bottom: 2rem; }
+            .deduction-path { flex-direction: column; }
+            table { border: none; box-shadow: none; }
+            table thead { display: none; }
+            table tbody, table tr, table td { display: block; width: 100%; }
+            table tr { margin-bottom: 1.5rem; border: 2px solid var(--border-color); border-radius: 12px; padding: 1rem; background: var(--card-bg); }
+            table td { border: none; padding-left: 50%; position: relative; text-align: right; }
+            table td:before { content: attr(data-label); position: absolute; left: 1rem; width: calc(50% - 2rem); font-weight: 700; color: var(--primary-color); text-align: left; }
+            #ganancias-breakdown td:nth-child(1):before { content: 'Parte:'; }
+            #ganancias-breakdown td:nth-child(2):before { content: 'Ingreso Bruto:'; }
+            #ganancias-breakdown td:nth-child(3):before { content: 'Deducciones:'; }
+            #ganancias-breakdown td:nth-child(4):before { content: 'Ingreso Neto:'; }
         }
     </style>
 </head>
@@ -872,24 +240,27 @@
 
     <div class="header-title">
         <h1 > 🎵 SPLITFLOW</h1>
-
-
         <button id="settings-btn" type="button" onclick="openModal()">⚙️</button>
-
     </div>
 
     <form id="form">
-        <fieldset><legend>🎧 Streams totales</legend>
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                <div><label for="spotify">Spotify:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="spotify" data-step="-10000">−</button><input type="text" id="spotify" value="30,000"><button type="button" class="input-control-btn" data-target="spotify" data-step="10000">+</button></div></div>
-                <div><label for="apple">Apple Music:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="apple" data-step="-5000">−</button><input type="text" id="apple" value="15,000"><button type="button" class="input-control-btn" data-target="apple" data-step="5000">+</button></div></div>
-                <div><label for="youtube">YouTube:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="youtube" data-step="-25000">−</button><input type="text" id="youtube" value="60,000"><button type="button" class="input-control-btn" data-target="youtube" data-step="25000">+</button></div></div>
-                <div><label for="tidal">Tidal:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="tidal" data-step="-1000">−</button><input type="text" id="tidal" value="5,000"><button type="button" class="input-control-btn" data-target="tidal" data-step="1000">+</button></div></div>
-                <div><label for="amazon">Amazon Music:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="amazon" data-step="-2000">−</button><input type="text" id="amazon" value="10,000"><button type="button" class="input-control-btn" data-target="amazon" data-step="2000">+</button></div></div>
-                <div><label for="deezer">Deezer:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="deezer" data-step="-2000">−</button><input type="text" id="deezer" value="8,000"><button type="button" class="input-control-btn" data-target="deezer" data-step="2000">+</button></div></div>
-                <div><label for="sync" class="tooltip" title="50% a Máster, 50% a Publishing">Sincronización ($):</label><input type="number" id="sync" min="0" value="0"></div>
-                <div><label for="physical" class="tooltip" title="100% a Máster">Ventas Físicas ($):</label><input type="number" id="physical" min="0" value="0"></div>
-                <div><label for="youtube_cid" class="tooltip" title="100% a Publishing">YouTube Content ID ($):</label><input type="number" id="youtube_cid" min="0" value="0"></div>
+        <fieldset id="streams-fieldset">
+            <legend class="legend-collapsible">
+                🎧 Streams totales
+                <span class="collapse-indicator">▼</span>
+            </legend>
+            <div class="collapsible-content">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                    <div><label for="spotify">Spotify:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="spotify" data-step="-10000">−</button><input type="text" id="spotify" value="30,000"><button type="button" class="input-control-btn" data-target="spotify" data-step="10000">+</button></div></div>
+                    <div><label for="apple">Apple Music:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="apple" data-step="-5000">−</button><input type="text" id="apple" value="15,000"><button type="button" class="input-control-btn" data-target="apple" data-step="5000">+</button></div></div>
+                    <div><label for="youtube">YouTube:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="youtube" data-step="-25000">−</button><input type="text" id="youtube" value="60,000"><button type="button" class="input-control-btn" data-target="youtube" data-step="25000">+</button></div></div>
+                    <div><label for="tidal">Tidal:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="tidal" data-step="-1000">−</button><input type="text" id="tidal" value="5,000"><button type="button" class="input-control-btn" data-target="tidal" data-step="1000">+</button></div></div>
+                    <div><label for="amazon">Amazon Music:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="amazon" data-step="-2000">−</button><input type="text" id="amazon" value="10,000"><button type="button" class="input-control-btn" data-target="amazon" data-step="2000">+</button></div></div>
+                    <div><label for="deezer">Deezer:</label><div class="input-with-controls"><button type="button" class="input-control-btn" data-target="deezer" data-step="-2000">−</button><input type="text" id="deezer" value="8,000"><button type="button" class="input-control-btn" data-target="deezer" data-step="2000">+</button></div></div>
+                    <div><label for="sync" class="tooltip" title="50% a Máster, 50% a Publishing">Sincronización ($):</label><input type="number" id="sync" min="0" value="0"></div>
+                    <div><label for="physical" class="tooltip" title="100% a Máster">Ventas Físicas ($):</label><input type="number" id="physical" min="0" value="0"></div>
+                    <div><label for="youtube_cid" class="tooltip" title="100% a Publishing">YouTube Content ID ($):</label><input type="number" id="youtube_cid" min="0" value="0"></div>
+                </div>
             </div>
         </fieldset>
 
@@ -901,16 +272,19 @@
             </div>
             <div id="master-collaborators">
                  <div class="master-row">
-                    <input type="text" value="Artista Principal" class="master-name">
-                    <input type="number" placeholder="%" class="master-split" min="0" max="100" value="90">
-                    <input type="number" placeholder="%" class="master-sello" min="0" max="100" value="50">
-                    <input type="number" placeholder="%" class="master-manager" min="0" max="100" value="20">
-                    <div class="input-with-controls">
-                        <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="-1000" data-row-id="0">−</button>
-                        <input type="text" placeholder="$" class="master-recoup" min="0" value="0" data-row-id="1">
-                        <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="1000" data-row-id="1">+</button>
-                    </div>
-                    <input type="number" placeholder="%" class="master-tax" min="0" max="100" value="10">
+                    <label class="mobile-label"><span>Entidad</span><input type="text" value="Artista Principal" class="master-name"></label>
+                    <label class="mobile-label"><span>Split %</span><input type="number" placeholder="%" class="master-split" min="0" max="100" value="90"></label>
+                    <label class="mobile-label"><span>Sello %</span><input type="number" placeholder="%" class="master-sello" min="0" max="100" value="50"></label>
+                    <label class="mobile-label"><span>Mánager %</span><input type="number" placeholder="%" class="master-manager" min="0" max="100" value="20"></label>
+                    <label class="mobile-label">
+                        <span>Recoupable ($)</span>
+                        <div class="input-with-controls">
+                            <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="-1000" data-row-id="0">−</button>
+                            <input type="text" placeholder="$" class="master-recoup" min="0" value="0" data-row-id="1">
+                            <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="1000" data-row-id="1">+</button>
+                        </div>
+                    </label>
+                    <label class="mobile-label"><span>Impuestos %</span><input type="number" placeholder="%" class="master-tax" min="0" max="100" value="10"></label>
                     <button type="button" class="remove-btn" onclick="this.parentElement.remove(); debouncedCalculate();">✕</button>
                 </div>
             </div>
@@ -923,17 +297,17 @@
             </div>
             <div id="publishing-collaborators">
                 <div class="publishing-row">
-                    <input type="text" value="Compositor (Artista)" class="publishing-name">
-                    <input type="number" placeholder="%" class="publishing-split" min="0" max="100" value="50">
-                    <input type="number" placeholder="%" class="publishing-editor" min="0" max="100" value="15">
-                    <input type="number" placeholder="%" class="publishing-tax" min="0" max="100" value="10">
+                    <label class="mobile-label"><span>Compositor</span><input type="text" value="Compositor (Artista)" class="publishing-name"></label>
+                    <label class="mobile-label"><span>Split %</span><input type="number" placeholder="%" class="publishing-split" min="0" max="100" value="50"></label>
+                    <label class="mobile-label"><span>Editora %</span><input type="number" placeholder="%" class="publishing-editor" min="0" max="100" value="15"></label>
+                    <label class="mobile-label"><span>Impuestos %</span><input type="number" placeholder="%" class="publishing-tax" min="0" max="100" value="10"></label>
                     <button type="button" class="remove-btn" onclick="this.parentElement.remove(); debouncedCalculate();">✕</button>
                 </div>
                 <div class="publishing-row">
-                    <input type="text" value="Co-Compositor A" class="publishing-name">
-                    <input type="number" placeholder="%" class="publishing-split" min="0" max="100" value="50">
-                    <input type="number" placeholder="%" class="publishing-editor" min="0" max="100" value="0">
-                    <input type="number" placeholder="%" class="publishing-tax" min="0" max="100" value="10">
+                    <label class="mobile-label"><span>Compositor</span><input type="text" value="Co-Compositor A" class="publishing-name"></label>
+                    <label class="mobile-label"><span>Split %</span><input type="number" placeholder="%" class="publishing-split" min="0" max="100" value="50"></label>
+                    <label class="mobile-label"><span>Editora %</span><input type="number" placeholder="%" class="publishing-editor" min="0" max="100" value="0"></label>
+                    <label class="mobile-label"><span>Impuestos %</span><input type="number" placeholder="%" class="publishing-tax" min="0" max="100" value="10"></label>
                     <button type="button" class="remove-btn" onclick="this.parentElement.remove(); debouncedCalculate();">✕</button>
                 </div>
             </div>
@@ -964,77 +338,37 @@
 
     <script>
         const form = document.getElementById('form');
-        let lastCalculationData = {}; // Variable global para almacenar los datos del último cálculo
+        let lastCalculationData = {};
         
-        // --- Funciones de Modal ---
-        function openModal() { 
-            document.getElementById('config-modal').style.display = 'grid'; 
-            document.querySelector('.modal-content').style.animation = 'slideInModal 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-        }
-        function closeModal() { 
-            const modal = document.getElementById('config-modal');
-            modal.style.animation = 'fadeInOverlay 0.3s ease-out reverse';
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-            debouncedCalculate(); 
-        }
-        
-        // Cierra el modal si se hace clic fuera del contenido
-        document.getElementById('config-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'config-modal') { closeModal(); }
-        });
-        
-        // Escape key para cerrar modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
-        // --- Fin Funciones de Modal ---
+        function openModal() { document.getElementById('config-modal').style.display = 'grid'; document.querySelector('.modal-content').style.animation = 'slideInModal 0.4s cubic-bezier(0.4, 0, 0.2, 1)'; }
+        function closeModal() { const modal = document.getElementById('config-modal'); modal.style.animation = 'fadeInOverlay 0.3s ease-out reverse'; setTimeout(() => { modal.style.display = 'none'; }, 300); debouncedCalculate(); }
+        document.getElementById('config-modal').addEventListener('click', (e) => { if (e.target.id === 'config-modal') { closeModal(); } });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-        // --- Funciones de formato y parsing ---
-        function formatNumberWithCommas(value) {
-            return Math.round(value).toLocaleString('en-US');
-        }
-
-        function parseFormattedNumber(value) {
-            // Remueve comas y cualquier caracter no numérico (excepto punto decimal para tasas)
-            return parseFloat(value.toString().replace(/[^0-9.]/g, '')) || 0;
-        }
+        function formatNumberWithCommas(value) { return Math.round(value).toLocaleString('en-US'); }
+        function parseFormattedNumber(value) { return parseFloat(value.toString().replace(/[^0-9.]/g, '')) || 0; }
         
         function handleInputBlur(e) {
             const input = e.target;
             const value = parseFormattedNumber(input.value);
-            // Solo aplica formato de miles si no es un campo de tasa (que usa decimales)
             if (!input.id.startsWith('rate-') && !input.classList.contains('master-tax') && !input.classList.contains('publishing-tax')) {
                 input.value = formatNumberWithCommas(value);
             } else {
-                 // Para tasas y porcentajes, solo asegurar que es un número válido
                  input.value = value;
             }
             debouncedCalculate();
         }
 
-        // Event listeners mejorados con efectos
         document.querySelectorAll('input[type="text"]').forEach(input => {
-            // Solo añadir formateo si NO es un input de nombre
             if (!input.classList.contains('master-name') && !input.classList.contains('publishing-name')) {
                 input.addEventListener('blur', handleInputBlur);
-                // Efecto de escala
-                input.addEventListener('focus', (e) => {
-                    e.target.parentElement.style.transform = 'scale(1.02)';
-                });
-                input.addEventListener('blur', (e) => {
-                    e.target.parentElement.style.transform = 'scale(1)';
-                });
+                input.addEventListener('focus', (e) => { e.target.closest('.input-with-controls, .mobile-label, div').style.transform = 'scale(1.02)'; });
+                input.addEventListener('blur', (e) => { e.target.closest('.input-with-controls, .mobile-label, div').style.transform = 'scale(1)'; });
             }
         });
         
-        document.querySelectorAll('.master-recoup').forEach(input => {
-            input.value = formatNumberWithCommas(parseFormattedNumber(input.value));
-            input.addEventListener('blur', handleInputBlur);
-        });
+        document.querySelectorAll('.master-recoup').forEach(input => { input.value = formatNumberWithCommas(parseFormattedNumber(input.value)); input.addEventListener('blur', handleInputBlur); });
 
-        // Lógica para botones +/- con efectos mejorados
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('input-control-btn')) {
                 const btn = e.target;
@@ -1042,81 +376,58 @@
                 const targetId = btn.dataset.target;
                 const targetClass = btn.dataset.targetClass;
                 const rowId = btn.dataset.rowId;
-
                 let input;
-                if (targetId) {
-                    input = document.getElementById(targetId);
-                } else if (targetClass) {
-                    input = document.querySelector(`.${targetClass}[data-row-id="${rowId}"]`);
-                }
-
+                if (targetId) { input = document.getElementById(targetId); } else if (targetClass) { input = document.querySelector(`.${targetClass}[data-row-id="${rowId}"]`); }
                 if (input) {
                     let currentValue = parseFormattedNumber(input.value);
                     let newValue = Math.max(0, currentValue + step);
-                    
                     input.value = formatNumberWithCommas(newValue);
-                    
-                    // Efecto visual de feedback
                     btn.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        btn.style.transform = 'scale(1.05)';
-                        setTimeout(() => {
-                            btn.style.transform = '';
-                        }, 100);
-                    }, 100);
-                    
+                    setTimeout(() => { btn.style.transform = 'scale(1.05)'; setTimeout(() => { btn.style.transform = ''; }, 100); }, 100);
                     debouncedCalculate();
                 }
             }
         });
-        // --- Fin de funciones de formato ---
 
-        let collaboratorCounter = 2; // Para IDs únicos
+        let collaboratorCounter = 2;
 
         function addCollaborator(type) {
             const container = document.getElementById(`${type}-collaborators`);
             const div = document.createElement('div');
             div.className = `${type}-row`;
             const rowId = collaboratorCounter++;
-            
-            // Animación de entrada
             div.style.opacity = '0';
             div.style.transform = 'translateY(-20px)';
-            
             if (type === 'master') {
                 div.innerHTML = `
-                    <input type="text" value="Nuevo Artista/Productor" class="master-name">
-                    <input type="number" placeholder="%" class="master-split" min="0" max="100" value="0">
-                    <input type="number" placeholder="%" class="master-sello" min="0" max="100" value="0">
-                    <input type="number" placeholder="%" class="master-manager" min="0" max="100" value="0">
-                    <div class="input-with-controls">
-                        <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="-1000" data-row-id="${rowId}">−</button>
-                        <input type="text" placeholder="$" class="master-recoup" min="0" value="0" data-row-id="${rowId}">
-                        <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="1000" data-row-id="${rowId}">+</button>
-                    </div>
-                    <input type="number" placeholder="%" class="master-tax" min="0" max="100" value="10">
+                    <label class="mobile-label"><span>Entidad</span><input type="text" value="Nuevo Artista/Productor" class="master-name"></label>
+                    <label class="mobile-label"><span>Split %</span><input type="number" placeholder="%" class="master-split" min="0" max="100" value="0"></label>
+                    <label class="mobile-label"><span>Sello %</span><input type="number" placeholder="%" class="master-sello" min="0" max="100" value="0"></label>
+                    <label class="mobile-label"><span>Mánager %</span><input type="number" placeholder="%" class="master-manager" min="0" max="100" value="0"></label>
+                    <label class="mobile-label">
+                        <span>Recoupable ($)</span>
+                        <div class="input-with-controls">
+                            <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="-1000" data-row-id="${rowId}">−</button>
+                            <input type="text" placeholder="$" class="master-recoup" min="0" value="0" data-row-id="${rowId}">
+                            <button type="button" class="input-control-btn" data-target-class="master-recoup" data-step="1000" data-row-id="${rowId}">+</button>
+                        </div>
+                    </label>
+                    <label class="mobile-label"><span>Impuestos %</span><input type="number" placeholder="%" class="master-tax" min="0" max="100" value="10"></label>
                     <button type="button" class="remove-btn" onclick="removeRow(this)">✕</button>
                 `;
                 const newRecoupInput = div.querySelector(`.master-recoup`);
                 if(newRecoupInput) newRecoupInput.addEventListener('blur', handleInputBlur);
-
-            } else { // publishing
+            } else {
                 div.innerHTML = `
-                    <input type="text" value="Nuevo Compositor" class="publishing-name">
-                    <input type="number" placeholder="%" class="publishing-split" min="0" max="100" value="0">
-                    <input type="number" placeholder="%" class="publishing-editor" min="0" max="100" value="0">
-                    <input type="number" placeholder="%" class="publishing-tax" min="0" max="100" value="10">
+                    <label class="mobile-label"><span>Compositor</span><input type="text" value="Nuevo Compositor" class="publishing-name"></label>
+                    <label class="mobile-label"><span>Split %</span><input type="number" placeholder="%" class="publishing-split" min="0" max="100" value="0"></label>
+                    <label class="mobile-label"><span>Editora %</span><input type="number" placeholder="%" class="publishing-editor" min="0" max="100" value="0"></label>
+                    <label class="mobile-label"><span>Impuestos %</span><input type="number" placeholder="%" class="publishing-tax" min="0" max="100" value="10"></label>
                     <button type="button" class="remove-btn" onclick="removeRow(this)">✕</button>
                 `;
             }
             container.appendChild(div);
-            
-            // Animación de entrada
-            setTimeout(() => {
-                div.style.transition = 'all 0.3s ease';
-                div.style.opacity = '1';
-                div.style.transform = 'translateY(0)';
-            }, 10);
+            setTimeout(() => { div.style.transition = 'all 0.3s ease'; div.style.opacity = '1'; div.style.transform = 'translateY(0)'; }, 10);
         }
 
         function removeRow(button) {
@@ -1124,81 +435,34 @@
             row.style.transition = 'all 0.3s ease';
             row.style.opacity = '0';
             row.style.transform = 'translateX(-100%)';
-            setTimeout(() => {
-                row.remove();
-                debouncedCalculate();
-            }, 300);
+            setTimeout(() => { row.remove(); debouncedCalculate(); }, 300);
         }
 
         function validateSplits() {
-            let totalPubSplit = 0; 
-            document.querySelectorAll('.publishing-split').forEach(input => { 
-                totalPubSplit += parseFloat(input.value) || 0; 
-            });
+            let totalPubSplit = 0; document.querySelectorAll('.publishing-split').forEach(input => { totalPubSplit += parseFloat(input.value) || 0; });
             document.getElementById('publishing-total').textContent = totalPubSplit.toFixed(2);
-            const pubSummary = document.getElementById('publishing-summary');
-            pubSummary.classList.toggle('invalid', Math.abs(totalPubSplit - 100) > 0.01);
-
-            let totalMasterSplit = 0; 
-            document.querySelectorAll('.master-split').forEach(input => { 
-                totalMasterSplit += parseFloat(input.value) || 0; 
-            });
+            document.getElementById('publishing-summary').classList.toggle('invalid', Math.abs(totalPubSplit - 100) > 0.01);
+            let totalMasterSplit = 0; document.querySelectorAll('.master-split').forEach(input => { totalMasterSplit += parseFloat(input.value) || 0; });
             document.getElementById('master-total').textContent = totalMasterSplit.toFixed(2);
-            const masterSummary = document.getElementById('master-summary');
-            masterSummary.classList.toggle('invalid', Math.abs(totalMasterSplit - 100) > 0.01);
+            document.getElementById('master-summary').classList.toggle('invalid', Math.abs(totalMasterSplit - 100) > 0.01);
         }
 
         const format = (val) => `${val.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 
         function calculate() {
-            // Mostrar indicador de carga
             const resultados = document.getElementById('resultados');
             resultados.classList.add('calculating');
-            
             setTimeout(() => {
                 validateSplits();
-
-                // 1. Leer tasas de streaming desde el modal
-                const rates = { 
-                    spotify: parseFloat(document.getElementById('rate-spotify').value) || 0,
-                    apple: parseFloat(document.getElementById('rate-apple').value) || 0,
-                    youtube: parseFloat(document.getElementById('rate-youtube').value) || 0,
-                    tidal: parseFloat(document.getElementById('rate-tidal').value) || 0,
-                    amazon: parseFloat(document.getElementById('rate-amazon').value) || 0,
-                    deezer: parseFloat(document.getElementById('rate-deezer').value) || 0
-                };
-                
-                // 2. CALCULAR INGRESOS BRUTOS
-                const streams = { 
-                    spotify: parseFormattedNumber(document.getElementById('spotify').value), 
-                    apple: parseFormattedNumber(document.getElementById('apple').value), 
-                    youtube: parseFormattedNumber(document.getElementById('youtube').value),
-                    tidal: parseFormattedNumber(document.getElementById('tidal').value),
-                    amazon: parseFormattedNumber(document.getElementById('amazon').value),
-                    deezer: parseFormattedNumber(document.getElementById('deezer').value)
-                };
-                const otherIncome = { 
-                    sync: parseFloat(document.getElementById('sync').value) || 0, 
-                    physical: parseFloat(document.getElementById('physical').value) || 0, 
-                    youtube_cid: parseFloat(document.getElementById('youtube_cid').value) || 0 
-                };
-                
-                let streamingIncome = (streams.spotify * rates.spotify) + 
-                                      (streams.apple * rates.apple) + 
-                                      (streams.youtube * rates.youtube) +
-                                      (streams.tidal * rates.tidal) +
-                                      (streams.amazon * rates.amazon) +
-                                      (streams.deezer * rates.deezer);
-                
+                const rates = { spotify: parseFloat(document.getElementById('rate-spotify').value) || 0, apple: parseFloat(document.getElementById('rate-apple').value) || 0, youtube: parseFloat(document.getElementById('rate-youtube').value) || 0, tidal: parseFloat(document.getElementById('rate-tidal').value) || 0, amazon: parseFloat(document.getElementById('rate-amazon').value) || 0, deezer: parseFloat(document.getElementById('rate-deezer').value) || 0 };
+                const streams = { spotify: parseFormattedNumber(document.getElementById('spotify').value), apple: parseFormattedNumber(document.getElementById('apple').value), youtube: parseFormattedNumber(document.getElementById('youtube').value), tidal: parseFormattedNumber(document.getElementById('tidal').value), amazon: parseFormattedNumber(document.getElementById('amazon').value), deezer: parseFormattedNumber(document.getElementById('deezer').value) };
+                const otherIncome = { sync: parseFloat(document.getElementById('sync').value) || 0, physical: parseFloat(document.getElementById('physical').value) || 0, youtube_cid: parseFloat(document.getElementById('youtube_cid').value) || 0 };
+                let streamingIncome = (streams.spotify * rates.spotify) + (streams.apple * rates.apple) + (streams.youtube * rates.youtube) + (streams.tidal * rates.tidal) + (streams.amazon * rates.amazon) + (streams.deezer * rates.deezer);
                 const grossMaster = (streamingIncome * 0.8) + otherIncome.physical + (otherIncome.sync * 0.5);
                 const grossPublishing = (streamingIncome * 0.2) + otherIncome.youtube_cid + (otherIncome.sync * 0.5);
-                
-                // 3. PROCESAR CADA ENTIDAD
                 let finalResults = [];
                 let masterNet = { sello: 0, manager: 0, recoupment: 0, taxes: 0, artistComposer: 0 };
                 let publishingNet = { editora: 0, taxes: 0, artistComposer: 0 };
-                
-                // Procesar Entidades del Master
                 document.querySelectorAll('#master-collaborators .master-row').forEach(row => {
                     const name = row.querySelector('.master-name').value || 'Anónimo';
                     const split = (parseFloat(row.querySelector('.master-split').value) || 0) / 100;
@@ -1206,72 +470,44 @@
                     const managerPct = (parseFloat(row.querySelector('.master-manager').value) || 0) / 100;
                     const taxPct = (parseFloat(row.querySelector('.master-tax').value) || 0) / 100;
                     const recoupable = parseFormattedNumber(row.querySelector('.master-recoup').value);
-
                     const grossShare = grossMaster * split;
                     const selloCut = grossShare * selloPct;
                     const shareAfterSello = grossShare - selloCut;
-
-                    // 1. Recoupment
                     const recoupedAmount = Math.min(shareAfterSello, recoupable);
                     const shareAfterRecoup = shareAfterSello - recoupedAmount;
                     const remainingDebt = Math.max(0, recoupable - recoupedAmount);
-
-                    // 2. Impuestos (Aplicados al ingreso post-sello y post-recoupment)
                     const taxableIncome = shareAfterRecoup;
                     const taxCut = taxableIncome * taxPct;
                     const shareAfterTaxes = taxableIncome - taxCut;
-
-                    // 3. Manager (Aplicado al ingreso post-impuestos)
                     const managerCut = shareAfterTaxes * managerPct;
                     const netShare = shareAfterTaxes - managerCut;
                     const totalDeductions = selloCut + recoupedAmount + taxCut + managerCut;
-                    
                     finalResults.push({ source: 'Master', type: 'Creative', name, grossShare, totalDeductions, netShare, details: { sello: selloCut, recoup: recoupedAmount, manager: managerCut, tax: taxCut, recoupedTotal: recoupable, remainingDebt: remainingDebt } });
-
-                    masterNet.sello += selloCut;
-                    masterNet.manager += managerCut;
-                    masterNet.recoupment += recoupedAmount;
-                    masterNet.taxes += taxCut;
-                    masterNet.artistComposer += netShare;
+                    masterNet.sello += selloCut; masterNet.manager += managerCut; masterNet.recoupment += recoupedAmount; masterNet.taxes += taxCut; masterNet.artistComposer += netShare;
                 });
-
-                // Procesar Entidades de Publishing
                 document.querySelectorAll('#publishing-collaborators .publishing-row').forEach(row => {
                     const name = row.querySelector('.publishing-name').value || 'Anónimo';
                     const split = (parseFloat(row.querySelector('.publishing-split').value) || 0) / 100;
                     const editorPct = (parseFloat(row.querySelector('.publishing-editor').value) || 0) / 100;
                     const taxPct = (parseFloat(row.querySelector('.publishing-tax').value) || 0) / 100;
-
                     const grossShare = grossPublishing * split;
                     const editorCut = grossShare * editorPct;
                     const shareAfterEditora = grossShare - editorCut;
-
-                    // Impuestos (Aplicados al ingreso post-editora)
                     const taxableIncome = shareAfterEditora;
                     const taxCut = taxableIncome * taxPct;
                     const netShare = taxableIncome - taxCut;
                     const totalDeductions = editorCut + taxCut;
-
                     finalResults.push({ source: 'Publishing', type: 'Creative', name, grossShare, totalDeductions, netShare, details: { editor: editorCut, tax: taxCut } });
-                    
-                    publishingNet.editora += editorCut;
-                    publishingNet.taxes += taxCut;
-                    publishingNet.artistComposer += netShare;
+                    publishingNet.editora += editorCut; publishingNet.taxes += taxCut; publishingNet.artistComposer += netShare;
                 });
-                
-                // 4. AÑADIR ENTIDADES COMISIONES AL FINAL RESULTS para la tabla
                 if (masterNet.sello > 0) finalResults.push({ source: 'Comisión de Sello', type: 'Commission', name: `Sello (Master)`, grossShare: masterNet.sello, totalDeductions: 0, netShare: masterNet.sello, details: {} });
                 if (masterNet.manager > 0) finalResults.push({ source: 'Comisión de Mánager', type: 'Commission', name: `Mánager (Master)`, grossShare: masterNet.manager, totalDeductions: 0, netShare: masterNet.manager, details: {} });
                 if (publishingNet.editora > 0) finalResults.push({ source: 'Comisión de Editora', type: 'Commission', name: `Editora (Publishing)`, grossShare: publishingNet.editora, totalDeductions: 0, netShare: publishingNet.editora, details: {} });
                 if (masterNet.recoupment > 0) finalResults.push({ source: 'Recuperación de Adelantos', type: 'Recoupment', name: `Recuperación ($)`, grossShare: masterNet.recoupment, totalDeductions: 0, netShare: masterNet.recoupment, details: {} });
                 if (masterNet.taxes + publishingNet.taxes > 0) finalResults.push({ source: 'Impuestos Retenidos', type: 'Tax', name: `Impuestos ($)`, grossShare: masterNet.taxes + publishingNet.taxes, totalDeductions: 0, netShare: masterNet.taxes + publishingNet.taxes, details: {} });
-                
-                // 5. GUARDAR Y ACTUALIZAR UI
-                lastCalculationData = {grossMaster, grossPublishing, finalResults, masterNet, publishingNet}; // Guardar datos
+                lastCalculationData = {grossMaster, grossPublishing, finalResults, masterNet, publishingNet};
                 updateTable(finalResults);
                 updateFlowchart(lastCalculationData);
-                
-                // Remover indicador de carga
                 resultados.classList.remove('calculating');
             }, 100);
         }
@@ -1279,391 +515,82 @@
         function updateTable(finalResults) {
             const tbody = document.getElementById('ganancias-breakdown');
             tbody.innerHTML = '';
-            
             const primaryEntities = finalResults.filter(r => r.type === 'Creative');
             const commissionsAndRecoup = finalResults.filter(r => r.type !== 'Creative');
-
             const renderRow = (res, index) => {
                  if (res.grossShare <= 0) return '';
                  const row = document.createElement('tr');
-                 row.style.opacity = '0';
-                 row.style.transform = 'translateY(20px)';
-                 row.innerHTML = `
-                    <td><strong>${res.name}</strong> <span style="color: var(--text-secondary); font-size: 0.9em;">(${res.source})</span></td>
-                    <td>${format(res.grossShare)}</td>
-                    <td>${format(res.totalDeductions)}</td>
-                    <td><strong style="color: var(--success-color);">${format(res.netShare)}</strong></td>
-                `;
+                 row.style.opacity = '0'; row.style.transform = 'translateY(20px)';
+                 row.innerHTML = `<td data-label="Parte"><strong>${res.name}</strong> <span style="color: var(--text-secondary); font-size: 0.9em;">(${res.source})</span></td><td data-label="Ingreso Bruto">${format(res.grossShare)}</td><td data-label="Deducciones">${format(res.totalDeductions)}</td><td data-label="Ingreso Neto"><strong style="color: var(--success-color);">${format(res.netShare)}</strong></td>`;
                 tbody.appendChild(row);
-                
-                // Animación de entrada escalonada
-                setTimeout(() => {
-                    row.style.transition = 'all 0.3s ease';
-                    row.style.opacity = '1';
-                    row.style.transform = 'translateY(0)';
-                }, index * 50);
+                setTimeout(() => { row.style.transition = 'all 0.3s ease'; row.style.opacity = '1'; row.style.transform = 'translateY(0)'; }, index * 50);
             };
-
             primaryEntities.forEach((res, index) => renderRow(res, index));
             commissionsAndRecoup.forEach((res, index) => renderRow(res, index + primaryEntities.length));
         }
         
          function updateFlowchart(data) {
             const flowchart = document.getElementById('dynamic-flowchart');
-            
             const masterCreatives = data.finalResults.filter(r => r.source === 'Master' && r.type === 'Creative');
             const publishingCreatives = data.finalResults.filter(r => r.source === 'Publishing' && r.type === 'Creative');
-            
             const createMasterDeductions = (collab) => {
-                 const recoupStatus = collab.details.remainingDebt > 0 
-                    ? `<div class="debt-info debt-remaining">💸 Deuda restante: ${format(collab.details.remainingDebt)}</div>`
-                    : `<div class="debt-info debt-zero">✅ Adelanto completamente pagado</div>`;
-
-                 return `<div class="deduction-node">
-                    <strong>🎤 ${collab.name}</strong>
-                    <span>💰 Bruto: ${format(collab.grossShare)}</span>
-                    <span>🏢  Sello: ${format(collab.details.sello)}</span>
-                    <span>💳  Recoup: ${format(collab.details.recoup)}</span>
-                    <span>🏛️  Impuestos: ${format(collab.details.tax)}</span>
-                    <span>👔  Mánager: ${format(collab.details.manager)}</span>
-                    ${recoupStatus}
-                    <strong style="color: var(--success-color);">🎯 Neto Final: ${format(collab.netShare)}</strong>
-                </div>`;
+                 const recoupStatus = collab.details.remainingDebt > 0 ? `<div class="debt-info debt-remaining">💸 Deuda restante: ${format(collab.details.remainingDebt)}</div>` : `<div class="debt-info debt-zero">✅ Adelanto completamente pagado</div>`;
+                 return `<div class="deduction-node"><strong>🎤 ${collab.name}</strong><span>💰 Bruto: ${format(collab.grossShare)}</span><span>🏢  Sello: ${format(collab.details.sello)}</span><span>💳  Recoup: ${format(collab.details.recoup)}</span><span>🏛️  Impuestos: ${format(collab.details.tax)}</span><span>👔  Mánager: ${format(collab.details.manager)}</span>${recoupStatus}<strong style="color: var(--success-color);">🎯 Neto Final: ${format(collab.netShare)}</strong></div>`;
             };
-
              const createPublishingDeductions = (collab) => {
-                 return `<div class="deduction-node">
-                    <strong>🎹 ${collab.name}</strong>
-                    <span>💰 Bruto: ${format(collab.grossShare)}</span>
-                    <span>📚  Editora: ${format(collab.details.editor)}</span>
-                    <span>🏛️  Impuestos: ${format(collab.details.tax)}</span>
-                    <strong style="color: var(--success-color);">🎯 Neto Final: ${format(collab.netShare)}</strong>
-                </div>`;
+                 return `<div class="deduction-node"><strong>🎹 ${collab.name}</strong><span>💰 Bruto: ${format(collab.grossShare)}</span><span>📚  Editora: ${format(collab.details.editor)}</span><span>🏛️  Impuestos: ${format(collab.details.tax)}</span><strong style="color: var(--success-color);">🎯 Neto Final: ${format(collab.netShare)}</strong></div>`;
             };
-
-            flowchart.innerHTML = `
-                <div class="flow-node" style="font-size: 1.2em; background: var(--gradient-primary);">
-                    🏆 Ingreso Bruto Total
-                    <strong>${format(data.grossMaster + data.grossPublishing)}</strong>
-                </div>
-                <div class="flow-arrow">⬇️</div>
-                <div class="flow-split-container">
-                    
-                    <div class="flow-path">
-                        <div class="flow-node" style="background: linear-gradient(145deg, #1565c0, #0d47a1);">
-                            🎵 MASTER RECORDINGS
-                            <strong>${format(data.grossMaster)}</strong>
-                        </div>
-                        <div class="flow-arrow">⬇️</div>
-                        <div class="deduction-path" style="gap: 10px;">
-                            <div style="flex-grow: 1;">
-                                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎙️ Artistas & Productores</h4>
-                                ${masterCreatives.map(createMasterDeductions).join('')}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flow-path">
-                        <div class="flow-node" style="background: linear-gradient(145deg, #7b1fa2, #4a148c);">
-                            📝 PUBLISHING RIGHTS
-                            <strong>${format(data.grossPublishing)}</strong>
-                        </div>
-                         <div class="flow-arrow">⬇️</div>
-                         <div class="deduction-path" style="gap: 10px;">
-                            <div style="flex-grow: 1;">
-                                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎹 Compositores</h4>
-                                ${publishingCreatives.map(createPublishingDeductions).join('')}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flow-arrow" style="font-size: 2em; margin-top: 2rem;">💸</div>
-                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 1rem;">
-                    <div class="flow-node" style="background: linear-gradient(135deg, #6a1b9a, #8e24aa); border-color: #ce93d8;">
-                        🏛️ Total Impuestos
-                        <strong>${format(data.masterNet.taxes + data.publishingNet.taxes)}</strong>
-                    </div>
-                    <div class="flow-node" style="background: linear-gradient(135deg, #6a1b9a, #8e24aa); border-color: #ffcc80;">
-                        💳 Total Recoupments
-                        <strong>${format(data.masterNet.recoupment)}</strong>
-                    </div>
-                    <div class="flow-node" style="background: linear-gradient(135deg, #6a1b9a, #8e24aa); border-color: #90caf9;">
-                        💼 Total Comisiones
-                        <strong>${format(data.masterNet.sello + data.masterNet.manager + data.publishingNet.editora)}</strong>
-                    </div>
-                </div>
-            `;
-            
-            // Animar elementos del flowchart
-            setTimeout(() => {
-                document.querySelectorAll('.flow-node, .deduction-node').forEach((node, index) => {
-                    node.style.opacity = '0';
-                    node.style.transform = 'translateY(30px)';
-                    setTimeout(() => {
-                        node.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-                        node.style.opacity = '1';
-                        node.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
-            }, 50);
+            flowchart.innerHTML = `<div class="flow-node" style="font-size: 1.2em; background: var(--gradient-primary);">🏆 Ingreso Bruto Total<strong>${format(data.grossMaster + data.grossPublishing)}</strong></div><div class="flow-arrow">⬇️</div><div class="flow-split-container"><div class="flow-path"><div class="flow-node" style="background: linear-gradient(145deg, #1565c0, #0d47a1);">🎵 MASTER RECORDINGS<strong>${format(data.grossMaster)}</strong></div><div class="flow-arrow">⬇️</div><div class="deduction-path" style="gap: 10px;"><div style="flex-grow: 1;"><h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎙️ Artistas & Productores</h4>${masterCreatives.map(createMasterDeductions).join('')}</div></div></div><div class="flow-path"><div class="flow-node" style="background: linear-gradient(145deg, #7b1fa2, #4a148c);">📝 PUBLISHING RIGHTS<strong>${format(data.grossPublishing)}</strong></div><div class="flow-arrow">⬇️</div><div class="deduction-path" style="gap: 10px;"><div style="flex-grow: 1;"><h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎹 Compositores</h4>${publishingCreatives.map(createPublishingDeductions).join('')}</div></div></div></div><div class="flow-arrow" style="font-size: 2em; margin-top: 2rem;">💸</div><div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 1rem;"><div class="flow-node" style="background: linear-gradient(135deg, #6a1b9a, #8e24aa); border-color: #ce93d8;">🏛️ Total Impuestos<strong>${format(data.masterNet.taxes + data.publishingNet.taxes)}</strong></div><div class="flow-node" style="background: linear-gradient(135deg, #6a1b9a, #8e24aa); border-color: #ffcc80;">💳 Total Recoupments<strong>${format(data.masterNet.recoupment)}</strong></div><div class="flow-node" style="background: linear-gradient(135deg, #6a1b9a, #8e24aa); border-color: #90caf9;">💼 Total Comisiones<strong>${format(data.masterNet.sello + data.masterNet.manager + data.publishingNet.editora)}</strong></div></div>`;
+            setTimeout(() => { document.querySelectorAll('.flow-node, .deduction-node').forEach((node, index) => { node.style.opacity = '0'; node.style.transform = 'translateY(30px)'; setTimeout(() => { node.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'; node.style.opacity = '1'; node.style.transform = 'translateY(0)'; }, index * 100); }); }, 50);
         }
         
         function copyReportToClipboard() {
-            const data = lastCalculationData;
-            if (!data || !data.finalResults) {
-                console.error("No hay datos calculados para copiar.");
-                return;
-            }
-
-            let reportText = "🎵 REPORTE DE REGALÍAS - SPLITFLOW 🎵\n";
-            reportText += "========================================\n\n";
-
-            // 1. Resumen de Ingresos Brutos
-            reportText += "💰 RESUMEN DE INGRESOS BRUTOS\n";
-            reportText += "----------------------------------------\n";
-            reportText += `Ingreso Bruto Total:\t\t$${format(data.grossMaster + data.grossPublishing)}\n`;
-            reportText += `  ▶ Ingresos de Master:\t$${format(data.grossMaster)}\n`;
-            reportText += `  ▶ Ingresos de Publishing:\t$${format(data.grossPublishing)}\n\n`;
-
-            // 2. Desglose Detallado por Entidad Creativa
-            reportText += "👥 DESGLOSE POR ENTIDAD CREATIVA\n";
-            reportText += "----------------------------------------\n";
-            
-            const creatives = data.finalResults.filter(r => r.type === 'Creative');
-            creatives.forEach(c => {
-                reportText += `👤 ${c.name} (${c.source})\n`;
-                reportText += `\t- Ingreso Bruto:\t$${format(c.grossShare)}\n`;
-                
-                if (c.source === 'Master') {
-                    reportText += `\t- Deducción Sello:\t$${format(c.details.sello)}\n`;
-                    reportText += `\t- Deducción Recoup:\t$${format(c.details.recoup)}\n`;
-                    reportText += `\t- Deducción Impuestos:\t$${format(c.details.tax)}\n`;
-                    reportText += `\t- Deducción Mánager:\t$${format(c.details.manager)}\n`;
-                } else { // Publishing
-                    reportText += `\t- Deducción Editora:\t$${format(c.details.editor)}\n`;
-                    reportText += `\t- Deducción Impuestos:\t$${format(c.details.tax)}\n`;
-                }
-
-                reportText += `\t- Total Deducciones:\t$${format(c.totalDeductions)}\n`;
-                reportText += `\t------------------------------------\n`;
-                reportText += `\t✅ INGRESO NETO:\t\t$${format(c.netShare)}\n`;
-
-                if (c.details.recoupedTotal > 0) {
-                     reportText += c.details.remainingDebt > 0 
-                        ? `\t   (Deuda restante: $${format(c.details.remainingDebt)})\n`
-                        : `\t   (Adelanto pagado por completo)\n`;
-                }
-                reportText += "\n";
-            });
-
-            // 3. Resumen de Comisiones y Retenciones
-            reportText += "💼 RESUMEN DE DEDUCCIONES TOTALES\n";
-            reportText += "----------------------------------------\n";
-            const totalCommissions = data.masterNet.sello + data.masterNet.manager + data.publishingNet.editora;
-            const totalTaxes = data.masterNet.taxes + data.publishingNet.taxes;
-
-            reportText += `Comisiones Totales:\t\t$${format(totalCommissions)}\n`;
-            reportText += `  ▶ Sello (Master):\t\t$${format(data.masterNet.sello)}\n`;
-            reportText += `  ▶ Mánager (Master):\t\t$${format(data.masterNet.manager)}\n`;
-            reportText += `  ▶ Editora (Publishing):\t$${format(data.publishingNet.editora)}\n\n`;
-            reportText += `Recuperación de Adelantos:\t$${format(data.masterNet.recoupment)}\n`;
-            reportText += `Impuestos Retenidos:\t\t$${format(totalTaxes)}\n\n`;
-            
-            reportText += "========================================\n";
-            reportText += "Reporte generado con la Calculadora de Regalías SPLITFLOW de © BUKOFLOW LLC.\n";
-
-
-            navigator.clipboard.writeText(reportText).then(() => {
-                const copyBtn = document.getElementById('copy-btn');
-                const originalText = copyBtn.innerHTML;
-                const originalBg = copyBtn.style.background;
-                
-                copyBtn.innerHTML = '✅ ¡Reporte Copiado!';
-                copyBtn.style.background = 'var(--gradient-secondary)';
-                copyBtn.style.transform = 'scale(1.05)';
-                
-                setTimeout(() => {
-                    copyBtn.innerHTML = originalText;
-                    copyBtn.style.background = originalBg;
-                    copyBtn.style.transform = '';
-                }, 2500);
-            }).catch(err => {
-                console.error('Error al copiar el reporte: ', err);
-                const copyBtn = document.getElementById('copy-btn');
-                copyBtn.innerHTML = '❌ Error al copiar';
-                copyBtn.style.background = 'var(--error-color)';
-                setTimeout(() => {
-                    copyBtn.innerHTML = '📋 Copiar Reporte';
-                    copyBtn.style.background = '';
-                }, 2000);
-            });
+            const data = lastCalculationData; if (!data || !data.finalResults) { console.error("No hay datos calculados para copiar."); return; }
+            let reportText = "🎵 REPORTE DE REGALÍAS - SPLITFLOW 🎵\n========================================\n\n💰 RESUMEN DE INGRESOS BRUTOS\n----------------------------------------\n" + `Ingreso Bruto Total:\t\t$${format(data.grossMaster + data.grossPublishing)}\n` + `  ▶ Ingresos de Master:\t$${format(data.grossMaster)}\n` + `  ▶ Ingresos de Publishing:\t$${format(data.grossPublishing)}\n\n` + "👥 DESGLOSE POR ENTIDAD CREATIVA\n----------------------------------------\n";
+            data.finalResults.filter(r => r.type === 'Creative').forEach(c => { reportText += `👤 ${c.name} (${c.source})\n\t- Ingreso Bruto:\t$${format(c.grossShare)}\n` + (c.source === 'Master' ? `\t- Deducción Sello:\t$${format(c.details.sello)}\n\t- Deducción Recoup:\t$${format(c.details.recoup)}\n\t- Deducción Impuestos:\t$${format(c.details.tax)}\n\t- Deducción Mánager:\t$${format(c.details.manager)}\n` : `\t- Deducción Editora:\t$${format(c.details.editor)}\n\t- Deducción Impuestos:\t$${format(c.details.tax)}\n`) + `\t- Total Deducciones:\t$${format(c.totalDeductions)}\n\t------------------------------------\n\t✅ INGRESO NETO:\t\t$${format(c.netShare)}\n` + (c.details.recoupedTotal > 0 ? (c.details.remainingDebt > 0 ? `\t   (Deuda restante: $${format(c.details.remainingDebt)})\n` : `\t   (Adelanto pagado por completo)\n`) : "") + "\n"; });
+            const totalCommissions = data.masterNet.sello + data.masterNet.manager + data.publishingNet.editora; const totalTaxes = data.masterNet.taxes + data.publishingNet.taxes;
+            reportText += "💼 RESUMEN DE DEDUCCIONES TOTALES\n----------------------------------------\n" + `Comisiones Totales:\t\t$${format(totalCommissions)}\n` + `  ▶ Sello (Master):\t\t$${format(data.masterNet.sello)}\n` + `  ▶ Mánager (Master):\t\t$${format(data.masterNet.manager)}\n` + `  ▶ Editora (Publishing):\t$${format(data.publishingNet.editora)}\n\n` + `Recuperación de Adelantos:\t$${format(data.masterNet.recoupment)}\n` + `Impuestos Retenidos:\t\t$${format(totalTaxes)}\n\n========================================\nReporte generado con la Calculadora de Regalías SPLITFLOW de © BUKOFLOW LLC.\n`;
+            navigator.clipboard.writeText(reportText).then(() => { const copyBtn = document.getElementById('copy-btn'); const originalText = copyBtn.innerHTML; const originalBg = copyBtn.style.background; copyBtn.innerHTML = '✅ ¡Reporte Copiado!'; copyBtn.style.background = 'var(--gradient-secondary)'; copyBtn.style.transform = 'scale(1.05)'; setTimeout(() => { copyBtn.innerHTML = originalText; copyBtn.style.background = originalBg; copyBtn.style.transform = ''; }, 2500); }).catch(err => { console.error('Error al copiar el reporte: ', err); const copyBtn = document.getElementById('copy-btn'); copyBtn.innerHTML = '❌ Error al copiar'; copyBtn.style.background = 'var(--error-color)'; setTimeout(() => { copyBtn.innerHTML = '📋 Copiar Reporte'; copyBtn.style.background = ''; }, 2000); });
         }
         
         document.getElementById('copy-btn').addEventListener('click', copyReportToClipboard);
-
-        // Función debounce mejorada
-        function debounce(func, delay) { 
-            let timeout; 
-            return function(...args) { 
-                clearTimeout(timeout); 
-                timeout = setTimeout(() => func(...args), delay); 
-            }; 
-        }
-        
+        function debounce(func, delay) { let timeout; return function(...args) { clearTimeout(timeout); timeout = setTimeout(() => func(...args), delay); }; }
         const debouncedCalculate = debounce(calculate, 300);
-        
-        // Event listeners principales
         form.addEventListener('input', debouncedCalculate);
         
-        // Inicializar la aplicación
-        document.addEventListener('DOMContentLoaded', () => {
-            // Animación de carga inicial
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 0.5s ease';
-                document.body.style.opacity = '1';
-            }, 100);
-            
-            calculate();
-            
-            // Agregar efectos hover a los fieldsets
-            document.querySelectorAll('fieldset').forEach(fieldset => {
-                fieldset.addEventListener('mouseenter', () => {
-                    fieldset.style.transform = 'translateY(-2px)';
-                });
-                fieldset.addEventListener('mouseleave', () => {
-                    fieldset.style.transform = 'translateY(0)';
-                });
-            });
-        });
+        document.addEventListener('DOMContentLoaded', () => { 
+            document.body.style.opacity = '0'; 
+            setTimeout(() => { document.body.style.transition = 'opacity 0.5s ease'; document.body.style.opacity = '1'; }, 100); 
+            calculate(); 
+            document.querySelectorAll('fieldset').forEach(fieldset => { fieldset.addEventListener('mouseenter', () => { fieldset.style.transform = 'translateY(-2px)'; }); fieldset.addEventListener('mouseleave', () => { fieldset.style.transform = 'translateY(0)'; }); });
 
-        // Efectos adicionales para inputs
-        document.querySelectorAll('input').forEach(input => {
-            input.addEventListener('focus', () => {
-                input.style.transform = 'scale(1.02)';
+            // --- LÓGICA DEL PANEL PLEGABLE ---
+            const streamsFieldset = document.getElementById('streams-fieldset');
+            const streamsLegend = streamsFieldset.querySelector('.legend-collapsible');
+            streamsLegend.addEventListener('click', () => {
+                if (window.innerWidth <= 768) { streamsFieldset.classList.toggle('is-collapsed'); }
             });
-            input.addEventListener('blur', () => {
-                input.style.transform = 'scale(1)';
-            });
-        });
-
-        // Efecto de typing para números grandes
-        function animateNumber(element, finalValue, duration = 1000) {
-            const startValue = 0;
-            const increment = finalValue / (duration / 16);
-            let currentValue = startValue;
-            
-            const timer = setInterval(() => {
-                currentValue += increment;
-                if (currentValue >= finalValue) {
-                    currentValue = finalValue;
-                    clearInterval(timer);
-                }
-                element.textContent = format(currentValue);
-            }, 16);
-        }
-
-        // Shortcuts de teclado
-        document.addEventListener('keydown', (e) => {
-            // Ctrl/Cmd + Enter para calcular
-            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-                e.preventDefault();
-                calculate();
-            }
-            
-            // Ctrl/Cmd + P para imprimir
-            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                e.preventDefault();
-                window.print();
-            }
-            
-            // Ctrl/Cmd + C para copiar (cuando no hay texto seleccionado)
-            if ((e.ctrlKey || e.metaKey) && e.key === 'c' && window.getSelection().toString() === '') {
-                e.preventDefault();
-                copyReportToClipboard();
-            }
-        });
-
-        // Tooltip mejorado
-        document.querySelectorAll('.tooltip').forEach(tooltip => {
-            tooltip.addEventListener('mouseenter', (e) => {
-                const tooltipText = e.target.getAttribute('title');
-                if (!tooltipText) return;
-                const tooltipDiv = document.createElement('div');
-                tooltipDiv.className = 'custom-tooltip';
-                tooltipDiv.textContent = tooltipText;
-                tooltipDiv.style.cssText = `
-                    position: fixed;
-                    background: var(--card-bg);
-                    color: var(--text-color);
-                    padding: 8px 12px;
-                    border-radius: 6px;
-                    font-size: 0.8em;
-                    border: 1px solid var(--border-color);
-                    box-shadow: var(--shadow);
-                    z-index: 1001;
-                    max-width: 200px;
-                    pointer-events: none;
-                    opacity: 0;
-                    transition: opacity 0.2s, transform 0.2s;
-                `;
-                
-                document.body.appendChild(tooltipDiv);
-                
-                const rect = e.target.getBoundingClientRect();
-                tooltipDiv.style.left = (rect.left + rect.width / 2 - tooltipDiv.offsetWidth / 2) + 'px';
-                tooltipDiv.style.top = (rect.top - tooltipDiv.offsetHeight - 10) + 'px';
-                
-                setTimeout(() => {
-                    tooltipDiv.style.opacity = '1';
-                    tooltipDiv.style.transform = 'translateY(-5px)';
-                }, 10);
-                
-                e.target.dataset.tooltip = tooltipText;
-                e.target.removeAttribute('title');
-            });
-            
-            tooltip.addEventListener('mouseleave', (e) => {
-                const customTooltip = document.querySelector('.custom-tooltip');
-                if (customTooltip) {
-                    customTooltip.remove();
-                }
-                if (e.target.dataset.tooltip) {
-                    e.target.setAttribute('title', e.target.dataset.tooltip);
-                }
-            });
-        });
-
-        // Validación en tiempo real mejorada
-        document.querySelectorAll('input[type="number"]').forEach(input => {
-            input.addEventListener('input', (e) => {
-                const value = parseFloat(e.target.value);
-                const min = parseFloat(e.target.getAttribute('min'));
-                const max = parseFloat(e.target.getAttribute('max'));
-                
-                if ((!isNaN(min) && value < min) || (!isNaN(max) && value > max)) {
-                    e.target.style.borderColor = 'var(--error-color)';
-                    e.target.style.boxShadow = '0 0 0 2px rgba(255, 71, 87, 0.2)';
+            function setInitialCollapseState() {
+                if (window.innerWidth <= 768) {
+                    if (!streamsFieldset.classList.contains('is-collapsed')) { streamsFieldset.classList.add('is-collapsed'); }
                 } else {
-                    e.target.style.borderColor = '';
-                    e.target.style.boxShadow = '';
+                    streamsFieldset.classList.remove('is-collapsed');
                 }
-            });
+            }
+            setInitialCollapseState();
+            window.addEventListener('resize', debounce(setInitialCollapseState, 200));
         });
 
-        console.log('🎵 Calculadora de Regalías V2 iniciada correctamente');
+        document.querySelectorAll('input').forEach(input => { input.addEventListener('focus', () => { input.style.transform = 'scale(1.02)'; }); input.addEventListener('blur', () => { input.style.transform = 'scale(1)'; }); });
+        document.addEventListener('keydown', (e) => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); calculate(); } if ((e.ctrlKey || e.metaKey) && e.key === 'p') { e.preventDefault(); window.print(); } if ((e.ctrlKey || e.metaKey) && e.key === 'c' && window.getSelection().toString() === '') { e.preventDefault(); copyReportToClipboard(); } });
+        document.querySelectorAll('.tooltip').forEach(tooltip => { tooltip.addEventListener('mouseenter', (e) => { const tooltipText = e.target.getAttribute('title'); if (!tooltipText) return; const tooltipDiv = document.createElement('div'); tooltipDiv.className = 'custom-tooltip'; tooltipDiv.textContent = tooltipText; tooltipDiv.style.cssText = `position: fixed; background: var(--card-bg); color: var(--text-color); padding: 8px 12px; border-radius: 6px; font-size: 0.8em; border: 1px solid var(--border-color); box-shadow: var(--shadow); z-index: 1001; max-width: 200px; pointer-events: none; opacity: 0; transition: opacity 0.2s, transform 0.2s;`; document.body.appendChild(tooltipDiv); const rect = e.target.getBoundingClientRect(); tooltipDiv.style.left = (rect.left + rect.width / 2 - tooltipDiv.offsetWidth / 2) + 'px'; tooltipDiv.style.top = (rect.top - tooltipDiv.offsetHeight - 10) + 'px'; setTimeout(() => { tooltipDiv.style.opacity = '1'; tooltipDiv.style.transform = 'translateY(-5px)'; }, 10); e.target.dataset.tooltip = tooltipText; e.target.removeAttribute('title'); }); tooltip.addEventListener('mouseleave', (e) => { const customTooltip = document.querySelector('.custom-tooltip'); if (customTooltip) { customTooltip.remove(); } if (e.target.dataset.tooltip) { e.target.setAttribute('title', e.target.dataset.tooltip); } }); });
+        document.querySelectorAll('input[type="number"]').forEach(input => { input.addEventListener('input', (e) => { const value = parseFloat(e.target.value); const min = parseFloat(e.target.getAttribute('min')); const max = parseFloat(e.target.getAttribute('max')); if ((!isNaN(min) && value < min) || (!isNaN(max) && value > max)) { e.target.style.borderColor = 'var(--error-color)'; e.target.style.boxShadow = '0 0 0 2px rgba(255, 71, 87, 0.2)'; } else { e.target.style.borderColor = ''; e.target.style.boxShadow = ''; } }); });
+        
+        console.log('🎵 Calculadora de Regalías V2.2 (Collapsible Panel) iniciada correctamente');
     </script>
-    <br/>
-<br/>
-<br/>
+    <br/><br/><br/>
     <div class="container">
-        <header><center>
-            <h4 id="main-subtitle">© 2025 BUKOFLOW LLC</h4></center>
-        </header>
-        <div id="content-container">
-        </div>          
+        <header><center><h4 id="main-subtitle">© 2025 BUKOFLOW LLC</h4></center></header>
     </div>
-
 </body>
 </html>
